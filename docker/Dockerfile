@@ -7,6 +7,7 @@ RUN apt install -y ssh
 
 COPY ssh_config /etc/ssh/ssh_config
 COPY sshd_config /etc/ssh/sshd_config
+COPY motd /etc/motd
 
 COPY user.sh /usr/local/bin/user.sh
 RUN chmod +x /usr/local/bin/user.sh

@@ -1,4 +1,5 @@
 ChallengeResponseAuthentication no
+Banner /etc/motd
 # UsePAM yes # Prints login information
 PrintMotd no
 X11Forwarding no
