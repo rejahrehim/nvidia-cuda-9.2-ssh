@@ -3,7 +3,7 @@ FROM nvidia/cuda:9.2-base-ubuntu16.04
 
 RUN apt update
 
-RUN apt install ssh
+RUN apt install -y ssh
 
 COPY ssh_config /etc/ssh/ssh_config
 COPY sshd_config /etc/ssh/sshd_config
