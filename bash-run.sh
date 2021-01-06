@@ -51,7 +51,7 @@ echo "services:"  >> docker-compose.yml
 echo "    server:"  >> docker-compose.yml
 echo "        build:"  >> docker-compose.yml
 echo "            context: ./docker"  >> docker-compose.yml
-echo "        image: nvidia/cuda:${cuda}-base-ubuntu16.04-futurelab-${username}" >> docker-compose.yml
+echo "        image: nvidia/cuda:$cuda-base-ubuntu16.04-futurelab-$USERNAME" >> docker-compose.yml
 echo "        hostname: futurelab"   >> docker-compose.yml
 
 buildsuccess=$(sudo docker-compose build | sed -n 'x;$p' | awk '{print $1}{print $2}')
