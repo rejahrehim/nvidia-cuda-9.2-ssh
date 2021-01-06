@@ -58,10 +58,5 @@ buildsuccess=$(sudo docker-compose build | sed -n 'x;$p' | awk '{print $1}{print
 
 if [ "$buildsuccess" != "Successfully
 built" ]; then
-   cd ..
-   rm -rf create-user
    exit 100
 fi
-
-cd ..
-rm -rf create-user
