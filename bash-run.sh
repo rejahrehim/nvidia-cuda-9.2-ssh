@@ -1,6 +1,7 @@
 USERNAME=$1
 userPass=$2
 cuda=$3
+sshhost=$4
 filename="/var/lib/jenkins/futurelabgpuusers"
 
 echo "#!/bin/bash" >> docker/user.sh
@@ -41,6 +42,7 @@ echo "$USERNAME $port $cuda" >> $filename
 
 echo "#######################################"
 echo "# Here is the Credentials for New User "
+echo "# host: $sshhost"
 echo "# user: $USERNAME"
 echo "# port: " $port 
 echo "# pass: $userPass"
