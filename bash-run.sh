@@ -10,7 +10,7 @@ echo "useradd -m -d /home/$USERNAME -G ssh $USERNAME -s /bin/bash" >> docker/use
 echo "echo \"$USERNAME:$userPass\" | chpasswd" >> docker/user.sh
 echo "echo \"$USERNAME ALL=(ALL) NOPASSWD:ALL\" >> /etc/sudoers" >> docker/user.sh
 
-sed -i "1s/.*/FROM nvidia\/cuda:$cuda-base-ubuntu16.04/" docker/Dockerfile
+sed -i "1s/.*/FROM nvidia\/cuda:$cuda-base-ubuntu20.04/" docker/Dockerfile
 
 containsElement () {
   local e match="$1"
